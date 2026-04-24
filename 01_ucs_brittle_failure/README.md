@@ -112,6 +112,19 @@ The stress-strain curve is consistent with characteristic brittle rock behaviour
 - `notes/` contains detailed interpretation notes
 - `scripts/` is reserved for post-processing scripts
 
+## Additional ParaView post-processing
+
+To further examine the internal stress evolution during UCS loading, additional post-processing was carried out in ParaView. This included visualization of selected tensor components, stress sampling using Plot Over Line, and glyph-based display of principal stress trajectories.
+
+The following stress components were examined:
+- stress 0, corresponding to σxx
+- stress 1, corresponding to σxy
+- stress 4, corresponding to σyy
+
+These visualizations helped show how the internal stress field evolved and redistributed as brittle failure localized through the specimen.
+
+See the `paraview/` folder for animations, screenshots, and interpretation notes.
+
 ## Notes
 
 This project is presented as part of my developing portfolio in numerical rock mechanics and computational geomechanics.
