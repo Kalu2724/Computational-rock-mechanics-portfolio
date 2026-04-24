@@ -104,15 +104,6 @@ The stress history near the specimen centre and the top platen force history bot
 
 The stress-strain curve is consistent with characteristic brittle rock behaviour under uniaxial compression. It reflects initial crack closure, an approximately linear elastic stage, pre-peak damage accumulation, and a sharp post-peak drop associated with unstable crack growth and specimen failure.
 
-## Files in this project
-
-- `figures/` contains the key result images
-- `data/` contains processed numerical output data
-- `report/` contains the assignment report
-- `notes/` contains detailed interpretation notes
-- `scripts/` is reserved for post-processing scripts
-
-
 ## Additional ParaView post-processing
 
 To further examine the internal stress evolution during UCS loading, additional post-processing was carried out in ParaView. This included:
@@ -133,6 +124,18 @@ These visualizations helped relate the final fracture pattern and stress-strain 
 - `paraview/animations/` contains the MP4 animations
 - `paraview/screenshots/` contains representative screenshot previews
 - `paraview/notes/paraview_interpretation.md` contains the detailed interpretation of the ParaView results
+
+## Files in this project
+
+- `figures/` contains the main UCS result images
+- `data/` contains processed numerical output data
+- `report/` contains the assignment report and supporting project documents
+- `notes/` contains detailed interpretation notes for the main UCS project
+- `scripts/` is reserved for post-processing scripts
+- `paraview/` contains advanced ParaView-based animations, screenshots, and interpretation notes
+
+
+
 
 ## Notes
 
