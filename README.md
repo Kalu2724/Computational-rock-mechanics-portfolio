@@ -24,6 +24,17 @@ The goal of this repository is to present structured case studies that demonstra
 ## Current project
 
 ### 01. UCS brittle failure simulation
-A 2D numerical simulation of unconfined compressive strength failure in a brittle rock specimen using Irazu. This project includes fracture-pattern interpretation, stress evolution, platen force response, and stress-strain post-processing.
+A 2D numerical simulation of unconfined compressive strength failure in a brittle rock specimen using Geomechanica Irazu. This project includes:
+
+- fracture-pattern interpretation
+- stress magnitude visualization and time-history plotting
+- top platen force visualization and force-history plotting
+- stress-strain post-processing and UCS estimation
+- brittle failure process interpretation
+- additional ParaView-based stress visualization, Plot Over Line analysis, and principal stress trajectory interpretation
+
+Project folder:
+
+`01_ucs_brittle_failure/`
 
 More projects will be added as the portfolio develops.
