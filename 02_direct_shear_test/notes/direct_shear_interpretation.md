@@ -1,49 +1,20 @@
-# Direct Shear Interpretation Notes
+# Direct Shear Test Interpretation
 
-## Main result figures
+## Overview
 
-The main result figures used in this project are:
+This note presents the interpretation of the main post-processing results for the direct shear test simulation carried out in Geomechanica Irazu. The purpose of this note is to explain the mechanical meaning of the plotted responses and the minimum principal stress snapshots obtained from the two simulation runs.
 
-- `direct_shear_shear_load_vs_displacement.png`
-- `direct_shear_equivalent_shear_load_vs_displacement.png`
-- `direct_shear_friction_angle_vs_displacement.png`
-- `direct_shear_shear_load_vs_timestep.png`
-- `direct_shear_run1_vs_run2_comparison.png`
+The interpretation is based on:
 
-The processed numerical outputs used in interpretation are:
+- shear-load response
+- equivalent shear-load response
+- instantaneous friction-angle response
+- comparison of Run 1 and Run 2
+- minimum principal stress evolution at selected simulation times
 
-- `direct_shear_summary.csv`
-- `direct_shear_summary.xlsx`
+## File naming convention
 
-## Shear load response
-
-The file `direct_shear_shear_load_vs_displacement.png` shows that both runs develop a sharp early peak in shear resistance, followed by a pronounced post-peak drop and a highly irregular residual stage. This indicates that the rough discontinuity initially mobilizes strong resistance through asperity interlocking, but once local degradation and slip begin, the interface can no longer sustain the same level of shear load.
-
-Run 1 reaches a peak shear load of about **114.02 N** at approximately **0.130 mm** displacement, whereas Run 2 reaches a higher peak shear load of about **160.37 N** at about **0.101 mm** displacement. This confirms that the higher normal load in Run 2 increases the mobilized shear resistance.
-
-The file `direct_shear_run1_vs_run2_comparison.png` makes this contrast especially clear. Run 2 consistently develops higher peak and intermediate shear resistance than Run 1, indicating stronger normal clamping and more sustained asperity engagement.
-
-The file `direct_shear_shear_load_vs_timestep.png` shows the same behaviour in time-step form rather than displacement form. It confirms that the strongest resistance is mobilized in the earlier portion of the simulation, followed by progressive degradation and fluctuating residual response.
-
-## Equivalent shear load response
-
-The file `direct_shear_equivalent_shear_load_vs_displacement.png` presents the scaled shear-load response for the actual 50 mm deep shear box using the prescribed scaling factor of 50.
-
-Run 1 reaches a peak equivalent shear load of about **5701.13 N**, while Run 2 reaches a higher peak equivalent shear load of about **8018.64 N**. This reinforces the same conclusion obtained from the unscaled shear-load curves: increasing the applied normal load increases the effective shear resistance of the discontinuity.
-
-This figure is particularly useful for engineering interpretation because it translates the 2D numerical result into the equivalent load level for the actual shear-box configuration.
-
-## Instantaneous friction-angle response
-
-The file `direct_shear_friction_angle_vs_displacement.png` shows the evolution of the instantaneous friction angle, computed from the simulated shear load divided by the applied normal load.
-
-Run 1 reaches a peak friction angle of about **80.05°**, while Run 2 reaches a peak friction angle of about **76.00°**. Even though Run 2 achieves the higher shear load, its peak friction angle is slightly lower because the normal load used in the denominator is larger.
-
-After the peak, both runs show strong oscillations in friction angle. This is expected, because the friction angle is calculated from the instantaneous shear load, and once the interface enters the post-peak stage, the shear load becomes highly irregular due to repeated asperity breakage, contact loss, and re-engagement. The friction-angle curve therefore reflects the unstable nature of the evolving discontinuity response.
-
-## Minimum principal stress evolution: Run 1
-
-The minimum principal stress evolution for Run 1 is represented by:
+The image filenames for the minimum principal stress snapshots follow a clear naming pattern:
 
 - `run1_min_principal_stress_2M_timesteps.png`
 - `run1_min_principal_stress_5M_timesteps.png`
@@ -51,38 +22,221 @@ The minimum principal stress evolution for Run 1 is represented by:
 - `run1_min_principal_stress_15M_timesteps.png`
 - `run1_min_principal_stress_20M_timesteps.png`
 
-At early time steps, represented by `run1_min_principal_stress_2M_timesteps.png` and `run1_min_principal_stress_5M_timesteps.png`, the minimum principal stress field is still relatively localized around a few contact zones along the rough discontinuity. The interface is carrying load through isolated asperity contacts, and only limited cracking is visible near the joint.
-
-At intermediate and later stages, represented by `run1_min_principal_stress_10M_timesteps.png`, `run1_min_principal_stress_15M_timesteps.png`, and `run1_min_principal_stress_20M_timesteps.png`, the stress redistribution becomes more pronounced near the rough joint profile. Localized tensile and compressive concentration zones develop near the most active asperities, and crack growth becomes more visible.
-
-By the later time steps, the interface is more degraded and the stress field is transferred through fewer surviving dominant contact regions. This agrees with the fluctuating residual response observed in the shear-load plots, where Run 1 continues to carry load but at a reduced and unstable level.
-
-## Minimum principal stress evolution: Run 2
-
-The minimum principal stress evolution for Run 2 is represented by:
+and similarly for Run 2:
 
 - `run2_min_principal_stress_2M_timesteps.png`
 - `run2_min_principal_stress_5M_timesteps.png`
 - `run2_min_principal_stress_10M_timesteps.png`
-- `run2_min_principal_stress_15M_timestep.png`
+- `run2_min_principal_stress_15M_timesteps.png`
 - `run2_min_principal_stress_20M_timesteps.png`
 
-Run 2 shows the same progressive development pattern, but with stronger and more sustained stress concentrations along the discontinuity. Because the applied normal load is larger, the contact zones experience stronger clamping and more persistent asperity interaction.
+Here, the labels `2M`, `5M`, `10M`, `15M`, and `20M` mean:
 
-At early stages, shown by `run2_min_principal_stress_2M_timesteps.png` and `run2_min_principal_stress_5M_timesteps.png`, the joint already shows stronger contact response than Run 1. This suggests that the higher normal load presses the rough surfaces together more effectively and allows greater shear resistance to be mobilized before major degradation occurs.
+- **2M** = 2 million time steps
+- **5M** = 5 million time steps
+- **10M** = 10 million time steps
+- **15M** = 15 million time steps
+- **20M** = 20 million time steps
 
-At intermediate and later stages, shown by `run2_min_principal_stress_10M_timesteps.png`, `run2_min_principal_stress_15M_timestep.png`, and `run2_min_principal_stress_20M_timesteps.png`, local cracking and stress redistribution become increasingly visible, but the interface maintains stronger load transfer than Run 1. This supports the higher peak and stronger retained shear resistance seen in the Run 2 load-displacement and equivalent-load curves.
+These images therefore show how the minimum principal stress field evolves as the simulation progresses with increasing time step.
 
-## Overall comparison
+---
 
-Taken together, the curve-based figures and the minimum-principal-stress image sequences show that increasing the normal load increases the mobilized shear resistance of the discontinuity.
+## 1. Shear load versus shear displacement
 
-Run 2 develops:
-- higher peak shear load
-- higher equivalent shear load
-- stronger and more sustained stress concentrations along the joint
-- stronger retained contact interaction in the later stages
+The file `direct_shear_shear_load_vs_displacement.png` shows the direct relationship between shear resistance and imposed shear displacement for both simulation runs.
 
-Run 1, by contrast, loses its dominant contact structure earlier and transitions more quickly into a lower and more fluctuating residual state.
+![Direct shear load vs shear displacement](../figures/direct_shear_shear_load_vs_displacement.png)
 
-The figures therefore support the conclusion that stronger normal loading promotes more effective asperity interlocking and greater shear resistance, even though progressive degradation still develops as sliding continues.
+### Interpretation
+
+Both runs show a rapid increase in shear load at the early stage of shearing, followed by a distinct peak and then a post-peak reduction. This is the expected behavior for a rough discontinuity under direct shear.
+
+- **Run 1** reaches a peak shear load of about **114.02 N** at a displacement of about **0.130 mm**.
+- **Run 2** reaches a higher peak shear load of about **160.37 N** at a displacement of about **0.101 mm**.
+
+The higher peak shear load in Run 2 indicates that the second loading case mobilized greater resistance along the discontinuity. This suggests a stronger interlocking effect or a greater effective contribution of asperity interaction under the Run 2 condition.
+
+After peak load, both curves become irregular and oscillatory. This reflects progressive asperity damage, local slip, repeated loss and regain of contact, and unstable load redistribution along the rough joint.
+
+---
+
+## 2. Shear load versus time step
+
+The file `direct_shear_shear_load_vs_timestep.png` shows how the shear load evolves with simulation step number.
+
+![Direct shear load vs time step](../figures/direct_shear_shear_load_vs_timestep.png)
+
+### Interpretation
+
+This plot shows the same mechanical story as the displacement plot, but now as a function of time step.
+
+In both runs:
+
+- the shear load increases steadily during the early stage
+- a peak load is reached
+- post-peak behavior becomes noisy and fluctuating
+
+The irregular post-peak response indicates that the discontinuity does not soften smoothly. Instead, shear resistance is controlled by a sequence of local failures, sliding events, and contact readjustments along the rough interface.
+
+This confirms that the direct shear response is governed by discontinuity-scale mechanical instability rather than uniform sliding.
+
+---
+
+## 3. Equivalent shear load versus shear displacement
+
+The file `direct_shear_equivalent_shear_load_vs_displacement.png` presents the equivalent shear load response for the two runs.
+
+![Equivalent shear load vs shear displacement](../figures/direct_shear_equivalent_shear_load_vs_displacement.png)
+
+### Interpretation
+
+This plot follows the same general trend as the direct shear-load plot, but in a scaled form.
+
+- **Run 1** reaches a peak equivalent shear load of about **5701.13 N** at **0.130 mm**
+- **Run 2** reaches a peak equivalent shear load of about **8018.64 N** at **0.101 mm**
+
+Again, Run 2 shows the higher peak value. This is consistent with the conclusion that Run 2 mobilizes greater shear resistance than Run 1.
+
+The post-peak oscillations indicate that equivalent shear resistance continues to vary strongly as the discontinuity surface degrades and local contact conditions evolve.
+
+---
+
+## 4. Instantaneous friction angle versus shear displacement
+
+The file `direct_shear_friction_angle_vs_displacement.png` shows the evolution of instantaneous friction angle, computed from the simulated shear load and the applied normal load.
+
+![Instantaneous friction angle vs shear displacement](../figures/direct_shear_friction_angle_vs_displacement.png)
+
+### Interpretation
+
+The friction-angle response shows how the apparent resistance to sliding evolves during shearing.
+
+- **Run 1** reaches a peak friction angle of about **80.05°**
+- **Run 2** reaches a peak friction angle of about **76.00°**
+
+Although Run 2 reaches the higher shear load, its peak friction angle is slightly lower. This is reasonable because friction angle depends not only on shear load but also on the normal load used in the calculation.
+
+After the peak, both runs show strong fluctuations. This happens because the instantaneous friction angle is directly controlled by the unstable post-peak shear response. As asperities break, surfaces slip, and contact zones reorganize, the friction angle also varies irregularly.
+
+This makes the friction-angle plot a useful indicator of the instability and evolving roughness-controlled behavior of the discontinuity.
+
+---
+
+## 5. Direct comparison of Run 1 and Run 2
+
+The file `direct_shear_run1_vs_run2_comparison.png` provides a direct comparison of the main shear-load response.
+
+![Run 1 vs Run 2 comparison](../figures/direct_shear_run1_vs_run2_comparison.png)
+
+### Interpretation
+
+This comparison clearly shows that:
+
+- Run 2 mobilizes greater peak shear resistance than Run 1
+- Run 2 reaches peak load slightly earlier
+- both runs undergo post-peak softening and irregular residual behavior
+
+The overall conclusion is that the second run is mechanically stronger in terms of peak resistance, but both runs ultimately exhibit unstable residual sliding controlled by asperity degradation and stress redistribution.
+
+---
+
+## 6. Minimum principal stress evolution: Run 1
+
+The following images show the evolution of minimum principal stress for **Run 1** at selected simulation times.
+
+### Run 1 at 2 million time steps
+
+![Run 1 minimum principal stress at 2M timesteps](../figures/run1_min_principal_stress_2M_timesteps.png)
+
+### Run 1 at 5 million time steps
+
+![Run 1 minimum principal stress at 5M timesteps](../figures/run1_min_principal_stress_5M_timesteps.png)
+
+### Run 1 at 10 million time steps
+
+![Run 1 minimum principal stress at 10M timesteps](../figures/run1_min_principal_stress_10M_timesteps.png)
+
+### Run 1 at 15 million time steps
+
+![Run 1 minimum principal stress at 15M timesteps](../figures/run1_min_principal_stress_15M_timesteps.png)
+
+### Run 1 at 20 million time steps
+
+![Run 1 minimum principal stress at 20M timesteps](../figures/run1_min_principal_stress_20M_timesteps.png)
+
+### Interpretation of Run 1 stress evolution
+
+At the early stages, represented by the **2M** and **5M** images, the stress field is still relatively localized around a few active contact zones along the discontinuity. Load is carried through isolated asperity contacts, and only limited cracking is visible near the joint.
+
+At intermediate stages, especially by **10M** and **15M** time steps, stress redistribution becomes more evident near the rough profile. Localized stress concentrations develop around the most active asperities, and crack development becomes more visible. This indicates that the interface is beginning to degrade and transfer load through changing contact locations.
+
+By **20M** time steps, the stress field reflects a more degraded joint response. The contact pattern becomes more selective, and the remaining load is transferred through fewer dominant zones. This agrees with the fluctuating residual response seen in the shear-load plots, where the joint continues to resist sliding but in a reduced and unstable manner.
+
+---
+
+## 7. Minimum principal stress evolution: Run 2
+
+The following images show the evolution of minimum principal stress for **Run 2** at selected simulation times.
+
+### Run 2 at 2 million time steps
+
+![Run 2 minimum principal stress at 2M timesteps](../figures/run2_min_principal_stress_2M_timesteps.png)
+
+### Run 2 at 5 million time steps
+
+![Run 2 minimum principal stress at 5M timesteps](../figures/run2_min_principal_stress_5M_timesteps.png)
+
+### Run 2 at 10 million time steps
+
+![Run 2 minimum principal stress at 10M timesteps](../figures/run2_min_principal_stress_10M_timesteps.png)
+
+### Run 2 at 15 million time steps
+
+![Run 2 minimum principal stress at 15M timesteps](../figures/run2_min_principal_stress_15M_timesteps.png)
+
+### Run 2 at 20 million time steps
+
+![Run 2 minimum principal stress at 20M timesteps](../figures/run2_min_principal_stress_20M_timesteps.png)
+
+### Interpretation of Run 2 stress evolution
+
+Run 2 shows the same broad pattern as Run 1, but with stronger stress mobilization and more pronounced local concentrations near the discontinuity.
+
+At **2M** and **5M** time steps, the stress field is already strongly influenced by the roughness profile, and contact zones near the joint are more actively loaded.
+
+At **10M** and **15M** time steps, the stress redistribution becomes more intense. High-stress concentration zones appear near major asperity contacts, and cracking near the interface becomes more developed. This is consistent with the higher peak resistance observed in Run 2, because greater resistance is typically associated with stronger asperity interaction before degradation progresses.
+
+By **20M** time steps, the stress field indicates an evolved post-peak state in which shear transfer is maintained through a reduced number of active contact regions. The stress distribution is no longer uniform, and the mechanical response is governed by progressive damage, local crushing or debonding, and intermittent contact re-engagement.
+
+---
+
+## 8. Engineering significance
+
+The direct shear results show that the rough discontinuity response is strongly controlled by asperity interaction.
+
+The main engineering observations are:
+
+- both runs exhibit a clear peak and post-peak shear-softening response
+- Run 2 develops higher peak shear resistance than Run 1
+- friction angle evolves dynamically and becomes unstable after peak load
+- stress redistribution along the joint becomes increasingly localized as shearing progresses
+- later-stage behavior is governed by progressive asperity damage and unstable residual sliding
+
+These observations are important because they show that direct shear behavior is not defined by a single constant friction value. Instead, the resistance evolves continuously with displacement, contact degradation, crack growth, and stress redistribution.
+
+---
+
+## 9. Summary
+
+The post-processing results support the following conclusions:
+
+1. The direct shear test response shows clear pre-peak strengthening, peak resistance, and post-peak softening.
+2. Run 2 achieves higher peak shear resistance than Run 1.
+3. Run 1 reaches a peak shear load of about **114.02 N**, while Run 2 reaches about **160.37 N**.
+4. Run 1 reaches a peak friction angle of about **80.05°**, while Run 2 reaches about **76.00°**.
+5. The minimum principal stress snapshots show that stress transfer becomes more localized as shearing progresses.
+6. The stress snapshots confirm progressive contact evolution, asperity damage, and redistribution of load along the discontinuity.
+7. The naming of the snapshot files directly indicates the run number and the simulation time step level, where `2M`, `5M`, `10M`, `15M`, and `20M` represent 2 million, 5 million, 10 million, 15 million, and 20 million time steps respectively.
+
+Overall, the direct shear simulation provides a useful numerical picture of how a rough rock discontinuity mobilizes resistance, reaches peak strength, and then progressively degrades under continued shearing.
