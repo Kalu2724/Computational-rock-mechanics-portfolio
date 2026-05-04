@@ -4,9 +4,13 @@ This repository documents my ongoing numerical modelling work in rock mechanics 
 
 ## Current focus
 
-The portfolio begins with a UCS brittle failure simulation completed in Irazu and will continue to expand with additional case studies such as:
+The portfolio currently contains two completed project case studies:
 
-- direct shear response
+- **01. UCS brittle failure simulation**
+- **02. Direct shear test simulation**
+
+It will continue to expand with additional case studies such as:
+
 - tunnel excavation
 - rock slope failure
 - fracture network analysis
@@ -18,12 +22,14 @@ The goal of this repository is to present structured case studies that demonstra
 
 - numerical modelling workflow
 - interpretation of rock failure processes
+- interpretation of discontinuity-controlled mechanical behaviour
 - engineering understanding of stress, deformation, and fracture response
-- post-processing of simulation outputs using engineering plots and summaries
+- post-processing of simulation outputs using engineering plots, images, and summaries
 
-## Current project
+## Current projects
 
 ### 01. UCS brittle failure simulation
+
 A 2D numerical simulation of unconfined compressive strength failure in a brittle rock specimen using Geomechanica Irazu. This project includes:
 
 - fracture-pattern interpretation
@@ -36,5 +42,25 @@ A 2D numerical simulation of unconfined compressive strength failure in a brittl
 Project folder:
 
 `01_ucs_brittle_failure/`
+
+### 02. Direct shear test simulation
+
+A 2D numerical simulation of direct shear along a rough rock discontinuity using Geomechanica Irazu. This project includes:
+
+- shear load versus shear displacement analysis
+- shear load versus time-step response
+- equivalent shear load interpretation
+- instantaneous friction-angle evolution
+- comparison of two normal-load cases
+- minimum principal stress interpretation at selected simulation times
+- Python-based post-processing of direct shear history outputs
+
+Project folder:
+
+`02_direct_shear_test/`
+
+## Notes
+
+Each project folder contains its own README, figures, processed data, notes, report materials, and scripts where applicable.
 
 More projects will be added as the portfolio develops.
