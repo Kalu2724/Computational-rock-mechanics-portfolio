@@ -38,6 +38,13 @@ This direct shear case study was structured around the following objectives:
 
 The model shows that the higher-normal-load case, **Run 2**, mobilizes greater peak shear resistance than **Run 1**. Run 1 reaches a peak shear load of about **114.02 N** at **0.130 mm**, while Run 2 reaches about **160.37 N** at **0.101 mm**. The results also show strongly irregular post-peak behavior, indicating progressive asperity degradation, unstable contact loss, and residual sliding along the rough discontinuity.
 
+## Summary table
+
+| Run | Normal load (N) | Peak shear load (N) | Displacement at peak (mm) | Peak friction angle (deg) | Peak equivalent shear load (N) |
+|---|---:|---:|---:|---:|---:|
+| Run 1 | 20 | 114.02 | 0.130 | 80.05 | 5701.13 |
+| Run 2 | 40 | 160.37 | 0.101 | 76.00 | 8018.64 |
+
 ## Results
 
 ### 1. Shear load versus shear displacement
