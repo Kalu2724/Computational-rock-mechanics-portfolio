@@ -1,0 +1,3 @@
+Case,Rows,Final time (s),Final displacement magnitude (m),Final displacement x (m),Final displacement y (m),Final radial displacement (m),Final tangential displacement (m),Final velocity magnitude (m/s),Final force magnitude (N)
+Case 1,31,0.15,0.00202223,-7.61908e-05,-4.75827e-05,-0.00201177,-2.84921e-07,0.00470851,2.95237
+Case 2,31,0.15,0.0232676,0.00303067,-0.000711412,-0.0206017,0.000730716,0.2263,257.616
