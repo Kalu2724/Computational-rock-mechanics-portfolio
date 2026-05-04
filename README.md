@@ -4,14 +4,14 @@ This repository documents my ongoing numerical modelling work in rock mechanics 
 
 ## Current focus
 
-The portfolio currently contains two completed project case studies:
+The portfolio currently contains three completed project case studies:
 
 - **01. UCS brittle failure simulation**
 - **02. Direct shear test simulation**
+- **03. Excavation of a circular tunnel**
 
 It will continue to expand with additional case studies such as:
 
-- tunnel excavation
 - rock slope failure
 - fracture network analysis
 - result visualization and post-processing workflows
@@ -58,6 +58,22 @@ A 2D numerical simulation of direct shear along a rough rock discontinuity using
 Project folder:
 
 `02_direct_shear_test/`
+
+### 03. Excavation of a circular tunnel
+
+A 2D circular tunnel excavation study in brittle geomaterial using Geomechanica Irazu. This project compares a stronger material case and a reduced-strength case under the same geometry, boundary conditions, in-situ stress state, and excavation logic. The project includes:
+
+- comparative geometry, model setup, and material-property tables
+- displacement-field evolution at selected output steps
+- comparison of non-fracturing and fracturing excavation responses
+- average displacement magnitude comparison for selected tunnel-region nodes
+- radial and tangential displacement comparison
+- force and velocity magnitude comparison
+- Python-based post-processing of exported node-history data
+
+Project folder:
+
+`03_tunnel_excavation_circular_opening/`
 
 ## Notes
 
