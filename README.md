@@ -68,7 +68,7 @@ A 2D circular tunnel excavation study in brittle geomaterial using Geomechanica 
 - comparison of non-fracturing and fracturing excavation responses
 - average displacement magnitude comparison for selected tunnel-region nodes
 - radial and tangential displacement comparison
-- force and velocity magnitude comparison
+- average force and velocity magnitude comparison
 - Python-based post-processing of exported node-history data
 
 Project folder:
