@@ -1,0 +1,3 @@
+Run,Normal load (N),Peak shear force (N),Displacement at peak (mm),Time step at peak,Peak friction angle (deg),Peak equivalent shear load (N),Final displacement (mm),Final shear force (N),Final friction angle (deg),Final equivalent shear load (N)
+Run 1,20.0,114.0226341,0.1295518,23,80.05130909684763,5701.131705,4.667000132,9.251500127,24.824081497240822,462.57500634999997
+Run 2,40.0,160.3727799,0.100862136,21,75.99509767829353,8018.638995,4.667000132,33.88665614,40.27015032747456,1694.332807
