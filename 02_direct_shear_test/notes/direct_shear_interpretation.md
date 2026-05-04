@@ -31,7 +31,7 @@ The file `direct_shear_equivalent_shear_load_vs_displacement.png` presents the s
 
 Run 1 reaches a peak equivalent shear load of about **5701.13 N**, while Run 2 reaches a higher peak equivalent shear load of about **8018.64 N**. This reinforces the same conclusion obtained from the unscaled shear-load curves: increasing the applied normal load increases the effective shear resistance of the discontinuity.
 
-This figure is particularly useful for engineering interpretation, because it translates the 2D numerical result into the equivalent load level for the actual shear-box configuration.
+This figure is particularly useful for engineering interpretation because it translates the 2D numerical result into the equivalent load level for the actual shear-box configuration.
 
 ## Instantaneous friction-angle response
 
@@ -51,9 +51,9 @@ The minimum principal stress evolution for Run 1 is represented by:
 - `run1_min_principal_stress_15M_timesteps.png`
 - `run1_min_principal_stress_20M_timesteps.png`
 
-At early time steps, the minimum principal stress field is still relatively localized around a few contact zones along the rough discontinuity. The interface is carrying load through isolated asperity contacts, and only limited cracking is visible near the joint.
+At early time steps, represented by `run1_min_principal_stress_2M_timesteps.png` and `run1_min_principal_stress_5M_timesteps.png`, the minimum principal stress field is still relatively localized around a few contact zones along the rough discontinuity. The interface is carrying load through isolated asperity contacts, and only limited cracking is visible near the joint.
 
-As time progresses, the stress redistribution becomes more pronounced near the rough joint profile. Localized tensile and compressive concentration zones develop near the most active asperities, and crack growth becomes more visible.
+At intermediate and later stages, represented by `run1_min_principal_stress_10M_timesteps.png`, `run1_min_principal_stress_15M_timesteps.png`, and `run1_min_principal_stress_20M_timesteps.png`, the stress redistribution becomes more pronounced near the rough joint profile. Localized tensile and compressive concentration zones develop near the most active asperities, and crack growth becomes more visible.
 
 By the later time steps, the interface is more degraded and the stress field is transferred through fewer surviving dominant contact regions. This agrees with the fluctuating residual response observed in the shear-load plots, where Run 1 continues to carry load but at a reduced and unstable level.
 
@@ -64,12 +64,14 @@ The minimum principal stress evolution for Run 2 is represented by:
 - `run2_min_principal_stress_2M_timesteps.png`
 - `run2_min_principal_stress_5M_timesteps.png`
 - `run2_min_principal_stress_10M_timesteps.png`
-- `run2_min_principal_stress_15M_timesteps.png`
+- `run2_min_principal_stress_15M_timestep.png`
 - `run2_min_principal_stress_20M_timesteps.png`
 
 Run 2 shows the same progressive development pattern, but with stronger and more sustained stress concentrations along the discontinuity. Because the applied normal load is larger, the contact zones experience stronger clamping and more persistent asperity interaction.
 
-As shearing continues, local cracking and stress redistribution become increasingly visible, but the interface maintains stronger load transfer than Run 1. This supports the higher peak and stronger retained shear resistance seen in the Run 2 load-displacement and equivalent-load curves.
+At early stages, shown by `run2_min_principal_stress_2M_timesteps.png` and `run2_min_principal_stress_5M_timesteps.png`, the joint already shows stronger contact response than Run 1. This suggests that the higher normal load presses the rough surfaces together more effectively and allows greater shear resistance to be mobilized before major degradation occurs.
+
+At intermediate and later stages, shown by `run2_min_principal_stress_10M_timesteps.png`, `run2_min_principal_stress_15M_timestep.png`, and `run2_min_principal_stress_20M_timesteps.png`, local cracking and stress redistribution become increasingly visible, but the interface maintains stronger load transfer than Run 1. This supports the higher peak and stronger retained shear resistance seen in the Run 2 load-displacement and equivalent-load curves.
 
 ## Overall comparison
 
