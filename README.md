@@ -14,6 +14,8 @@ It will continue to expand with additional case studies such as:
 
 - rock slope failure
 - fracture network analysis
+- Permeability and fluid injection behavior
+- borehole-related failure processes
 - result visualization and post-processing workflows
 
 ## Purpose
