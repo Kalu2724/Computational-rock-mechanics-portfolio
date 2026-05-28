@@ -77,6 +77,21 @@ Project folder:
 
 `03_tunnel_excavation_circular_opening/`
 
+### 04. Thermally induced borehole breakout
+
+A 2D thermo-mechanical borehole stability simulation using Geomechanica Irazu. This project investigates how heating of the borehole wall alters the near-wellbore temperature field, stress distribution, and deformation response, leading to breakout-prone damage around the opening. The project includes:
+
+- final solid temperature field visualization
+- diagonal line interpretation of solid temperature, force, and principal stress response
+- stress magnitude time-history plotting from exported monitoring data
+- radial temperature decay analysis
+- displacement magnitude versus radial distance analysis
+- Python-based spatial post-processing of the exported thermal dataset
+- comparison of ParaView-based and Python-based result visualization workflows
+
+**Project folder:**  
+`04_thermal_borehole_breakout/`
+
 ## Notes
 
 Each project folder contains its own README, figures, processed data, notes, report materials, and scripts where applicable.
