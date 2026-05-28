@@ -76,31 +76,31 @@ The simulation produced a strong localized thermal gradient around the borehole 
 
 ### 1. Final solid temperature field
 
-The final temperature field shows intense heating concentrated around the borehole wall, followed by rapid thermal decay outward into the rock mass.
+The temperature field shows that the heating effect is concentrated very close to the borehole. The highest temperatures are right around the borehole wall, and the temperature drops quickly as you move outward into the rock. This is important because the borehole wall is also where the strongest thermal expansion and thermal stress changes should occur. So this figure is not just showing where the rock is hot. It is also showing where the thermo-mechanical disturbance is most severe, which helps explain why breakout develops around the opening.
 
 ![Final solid temperature field](figures/thermal_induced_borehole_breakout_temperature_field.png)
 
 ### 2. Solid temperature profile along a selected diagonal line
 
-A diagonal profile through the model highlights a sharp thermal peak near the borehole wall and much lower temperatures in the far field.
+The diagonal temperature profile makes the thermal concentration easier to see quantitatively. There is a sharp rise near the borehole wall and then a fast drop toward the far-field temperature. That tells us the temperature change is highly localized and not spread evenly through the model. From a mechanics point of view, that matters because the steepest thermal gradients are where the strongest local thermal strains will develop. This helps confirm that the near-wellbore zone is the part of the model most strongly affected by heating.
 
 ![Solid temperature profile along diagonal](figures/solid_temperature_field_with_diagonal_temperature_profile.png)
 
 ### 3. Solid temperature and force profiles along the same diagonal line
 
-This figure compares the thermal response and force magnitude along the same selected line. It helps relate the thermal peak near the borehole to the mechanical response of the surrounding medium.
+Plotting the temperature and force magnitude on the same profile is useful because it shows how the thermal response and the mechanical response sit in the same region. The temperature peak occurs near the borehole, and the force response is also more active in that same neighborhood. The force curve is not as clean as the temperature curve, but that is expected in this kind of output. The main point is that the figure helps connect the heating directly to a mechanical consequence. It shows that the borehole is not only a thermal hotspot, but also a place where the local load response changes significantly.
 
 ![Solid temperature and force profiles](figures/solid_temperature_and_force_profiles_along_diagonal.png)
 
 ### 4. Principal stress field and diagonal stress profile
 
-The principal stress visualization shows how the borehole and thermal loading redistribute stress around the opening. The accompanying line profile highlights strong local stress perturbations near the borehole wall.
+This shows the actual stress redistribution around the borehole. The stress field is clearly disturbed near the opening, especially around the damaged zones. The diagonal profile helps make those stress changes easier to read. This matters because breakout is ultimately a stress problem. The rock fails when the local stress state around the borehole becomes too high for the material strength.
 
 ![Principal stress field and profile](figures/principal_stress_field_and_profile_along_diagonal.png)
 
 ### 5. Stress magnitude vs time
 
-The exported time-history data show a gradual increase in stress magnitude over the monitored interval. The minimum recorded stress magnitude was 43.37 MPa at 0.20 ms, while the maximum recorded value reached 56.94 MPa at 11.78 ms.
+The stress magnitude time-history gives a simple way to track how the monitored stress changed during the simulation. The minimum recorded value was 43.37 MPa at 0.20 ms, and the maximum was 56.94 MPa at 11.78 ms. Overall, the curve trends upward, which suggests that the selected location experienced progressive stress buildup over the recorded interval. In the context of breakout, it suggests that the local stress concentration was developing rather than simply appearing instantly.
 
 ![Stress magnitude vs time](figures/stress_magnitude_vs_time_annotated.png)
 
@@ -118,7 +118,7 @@ Displacement magnitude is largest near the borehole and decays steadily with rad
 
 ### 8. Python-generated solid temperature spatial map
 
-This Python-generated spatial map provides an independent view of the temperature field and confirms the concentration of thermal loading near the borehole.
+The Python-generated temperature map is useful mainly as a check on the ParaView result. It shows the same overall pattern: high temperature around the borehole and lower temperature farther away. It is not as visually refined as the ParaView image, but it is still valuable because it shows that the exported data can be post-processed independently and still reproduce the same physical trend.
 
 ![Solid temperature spatial map](figures/solid_temperature_spatial_map.png)
 
