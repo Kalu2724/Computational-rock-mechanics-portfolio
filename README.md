@@ -4,11 +4,12 @@ This repository documents my ongoing numerical modelling work in rock mechanics 
 
 ## Current focus
 
-The portfolio currently contains three completed project case studies:
+The portfolio currently contains four completed project case studies:
 
 - **01. UCS brittle failure simulation**
 - **02. Direct shear test simulation**
 - **03. Excavation of a circular tunnel**
+- **04. Thermally Induced Borehole Breakout**
 
 It will continue to expand with additional case studies such as:
 
