@@ -1,0 +1,9 @@
+,value
+peak_ucs_mpa,44.221830466959595
+peak_strain_percent,0.1464898650763183
+time_step_seconds,1.1514428882446939e-08
+steps_completed,98500
+triangles,400
+cohesive_interfaces,570
+broken_interfaces_final,62
+termination_reason,post-peak kinetic-energy limit

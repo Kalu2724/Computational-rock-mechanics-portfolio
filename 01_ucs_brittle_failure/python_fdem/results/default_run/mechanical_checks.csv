@@ -1,0 +1,7 @@
+check,measured,tolerance,passed
+mesh area,0.0,1e-12,True
+lumped mass,1.734723475976807e-18,1e-12,True
+rigid-body objectivity,0.00010800724534098638,0.001,True
+constant-strain patch,0.00010553747415542603,0.01,True
+cohesive action-reaction,1.3484525896502376e-14,1e-10,True
+softening endpoints/monotonicity,0.0,1e-12,True
