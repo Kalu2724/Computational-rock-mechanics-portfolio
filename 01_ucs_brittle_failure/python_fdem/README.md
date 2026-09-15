@@ -25,11 +25,7 @@ The implementation contains:
 
 The semi-discrete equation of motion is
 
-$$
-\mathbf{M}\ddot{\mathbf{u}} + \mathbf{C}\dot{\mathbf{u}}
-= \mathbf{f}_{\mathrm{bulk}} + \mathbf{f}_{\mathrm{coh}}
-+ \mathbf{f}_{\mathrm{contact}}.
-$$
+$$\mathbf{M}\ddot{\mathbf{u}}+\mathbf{C}\dot{\mathbf{u}}=\mathbf{f}_{\mathrm{bulk}}+\mathbf{f}_{\mathrm{coh}}+\mathbf{f}_{\mathrm{contact}}.$$
 
 Each triangle supplies the bulk force
 
