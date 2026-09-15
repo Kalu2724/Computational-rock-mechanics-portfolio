@@ -155,7 +155,7 @@ def select_stage_snapshots(result: SimulationResult) -> tuple[list[Snapshot], li
     rupture = int(first_broken[0]) if len(first_broken) else peak_index
     post = len(history) - 1
     indices = [pre, rupture, post]
-    labels = ["80% of peak", "first complete interface failure", "post-peak localization"]
+    labels = ["80% of peak", "first fully failed interface", "post-peak localization"]
     return [result.snapshots[i] for i in indices], labels
 
 
@@ -199,7 +199,12 @@ def _fracture_axis(
         ax.add_collection(cracks)
     ax.autoscale()
     ax.set_aspect("equal")
-    ax.set(xlabel="x (mm)", title=f"{label}\n$\\varepsilon_a$ = {100.0*snapshot.axial_strain:.3f}%")
+    ax.set_xlabel("x (mm)")
+    ax.set_title(
+        f"{label}\n$\\varepsilon_a$ = {100.0*snapshot.axial_strain:.3f}%",
+        fontsize=10.5,
+        pad=6.0,
+    )
     ax.grid(False)
     return collection
 
@@ -210,7 +215,7 @@ def plot_fracture_evolution(result: SimulationResult, damage_threshold: float = 
     snapshots, labels = select_stage_snapshots(result)
     all_compression = np.concatenate([-s.element_stress[:, 1] / 1.0e6 for s in snapshots])
     limits = (float(np.nanpercentile(all_compression, 2)), float(np.nanpercentile(all_compression, 98)))
-    fig, axes = plt.subplots(1, 3, figsize=(10.0, 7.0), sharey=True)
+    fig, axes = plt.subplots(1, 3, figsize=(10.2, 7.4), sharey=True)
     collection = None
     for ax, snapshot, label in zip(axes, snapshots, labels):
         collection = _fracture_axis(ax, result, snapshot, label, limits, damage_threshold)
@@ -224,8 +229,13 @@ def plot_fracture_evolution(result: SimulationResult, damage_threshold: float = 
         Line2D([0], [0], color=ORANGE, lw=3, label="shear dominated"),
     ]
     fig.legend(handles=legend, loc="lower center", ncol=3, bbox_to_anchor=(0.5, 0.01))
-    fig.suptitle(f"Damage localization (interfaces with $D \\geq {damage_threshold:.2f}$)", y=0.98)
-    fig.subplots_adjust(left=0.08, right=0.98, top=0.90, bottom=0.18, wspace=0.18)
+    fig.suptitle(
+        f"Damage localization (interfaces with $D \\geq {damage_threshold:.2f}$)",
+        y=0.985,
+    )
+    # Leave a deliberate title band above the two-line panel headings.  This
+    # also prevents overlap when Colab scales the inline PNG to notebook width.
+    fig.subplots_adjust(left=0.08, right=0.98, top=0.84, bottom=0.18, wspace=0.18)
     return fig
 
 
