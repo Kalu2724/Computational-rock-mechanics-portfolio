@@ -1,0 +1,8 @@
+,0
+temperature_profile_rmse_c,5.601158339510556
+preheat_kirsch_hoop_rmse_mpa,4.842064146335308
+top_bottom_damage_fraction,0.9647925893831568
+baseline_broken_interfaces,0.0
+final_broken_interfaces,30.0
+final_monitor_stress_magnitude_mpa,82.4116515370858
+final_maximum_temperature_c,140.0

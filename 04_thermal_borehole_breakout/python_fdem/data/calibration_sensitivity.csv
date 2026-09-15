@@ -1,0 +1,4 @@
+effective_thermal_expansion_per_c,damaged_interfaces,fully_failed_interfaces,top_bottom_damage_fraction,kinetic_to_internal_ratio
+1.25e-5,22,6,1.0000,3.8908e-5
+1.35e-5,39,18,0.9914,4.4838e-5
+1.50e-5,60,30,0.9648,5.4432e-5

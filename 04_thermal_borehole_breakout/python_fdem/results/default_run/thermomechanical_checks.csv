@@ -1,0 +1,7 @@
+check,measured,tolerance,passed
+mesh area,4.329103229141493e-06,0.002,True
+lumped mass,0.0,1e-12,True
+conductivity conservation,3.774758283725532e-15,1e-09,True
+uniform-temperature preservation,7.105427357601002e-14,1e-08,True
+stress-free thermal expansion patch,0.0,1e-09,True
+cohesive action-reaction,2.6233838256040975e-11,1e-10,True
